@@ -1,169 +1,49 @@
-import React from "react";
+﻿import React from "react";
 import "../App.css";
 
-const Projects = () => {
-  const experiences = [
-    {
-      title: "MS in Management Information Systems",
-      subtitle: "State University of New York at Buffalo, NY",
-      date: "Jul 2024 – May 2025",
-      logo: "/UBFinal.png",
-    },
-    {
-      title: "Legal AI Apprenticeship – Rupp Pfalzgraf LLP",
-      subtitle: "University at Buffalo - Experiential IT Program",
-      date: "Feb 2025 – May 2025",
-      description: `Built a legal complaint drafting system using RAG & FLAN-T5. Processed 28K NYSCEF PDFs, created a custom legal knowledge base, and deployed a local AI-powered app.`,
-      logo: "/RuppLogo.jpg",
-    },
-    {
-      title: "NGO Apprenticeship – Feed716 Donation Platform",
-      subtitle: "Volunteer work for Buffalo-based nonprofit",
-      date: "Feb 2025 – May 2025",
-      description: `Built a Salesforce-based Donation Management System using NPSP. Automated donor thank-you emails via Flows, configured donation records, and created reports and dashboards for donor tracking and transparency.`,
-      logo: "/feed716.jpg",
-    },
-    {
-      title: "Salesforce Administrator",
-      subtitle: "Cognizant Technology Solutions",
-      date: "Nov 2022 – Jul 2024",
-      description: "Worked on Health Cloud, Flows, Apex customization(Triggers and Classes), Visualforce Page, LWC,validation rules, Custom objects, Record types,Page Layouts,Reports & Dashboards,Profiles, Permission Sets, SOQL, Outlook Integration, Data Loader, Change Sets, Security Model Configuration, Business Process Optimization. Experienced in Jira, Agile sprints, user stories. Collaborated cross-functionally to optimize CRM performance.",
-      logo: "/Cognizant_Logo.jpg",
-    },
-    {
-      title: "Summer Internship",
-      subtitle: "Cognizant Technology Solutions",
-      date: "Jan 2022 – Aug 2022",
-      description: `Worked on channel preference and data handling for healthcare clients. Gained exposure to Salesforce CRM tools, including workflows, data loaders, and user access.`,
-      logo: "/Cognizant_Logo.jpg",
-    },
-    {
-      title: "Internship – Shiash Info Solutions",
-      subtitle: "Chennai",
-      date: "Mar 2021 – May 2021",
-      description: `Hands-on web development using React.js, HTML, CSS, JavaScript, Tailwind, SQL, and MySQL. Built dynamic front-end components and integrated them with backend APIs.`,
-      logo: "/Shiash.jpeg",
-    },
-    {
-      title: "B.E. in Computer Science Engineering",
-      subtitle: "Anna University, Chennai, India",
-      date: "2018 – 2022",
-      logo: "/Anna_Uni_Fin.png",
-    },
-  ];
-
-  return (
-    <section className="vertical-timeline-section">
-      <h2 className="vertical-timeline-header">My Experience and Education!</h2>
-      <div className="vertical-timeline">
-        {experiences.map((item, index) => (
-          <div className="timeline-row" key={index}>
-            {index % 2 === 0 ? (
-              <>
-                <div className="timeline-card left">
-                  <h3 className="timeline-title">{item.title}</h3>
-                  <p className="timeline-subtitle">{item.subtitle}</p>
-                  <p className="timeline-desc">{item.description}</p>
-                </div>
-                <div className="timeline-icon-wrapper">
-                  {item.logo && <img src={item.logo} alt={item.title} className="timeline-logo" />}
-                </div>
-                <p className="timeline-date">{item.date}</p>
-              </>
-            ) : (
-              <>
-                <p className="timeline-date">{item.date}</p>
-                <div className="timeline-icon-wrapper">
-                  {item.logo && <img src={item.logo} alt={item.title} className="timeline-logo" />}
-                </div>
-                <div className="timeline-card right">
-                  <h3 className="timeline-title">{item.title}</h3>
-                  <p className="timeline-subtitle">{item.subtitle}</p>
-                  <p className="timeline-desc">{item.description}</p>
-                </div>
-              </>
-            )}
-          </div>
-        ))}
-      </div>
-
-      {/* === PROJECTS SECTION STARTS HERE === */}
-      <section className="projects-section">
-        <h2 className="project-header">Salesforce Projects</h2>
-        <div className="project-grid">
-          <div className="project-card">
-            <h3>Smart Citizen Service Hub</h3>
-            <p>Automated service requests with flows, approvals & Experience Cloud portal for citizens.</p>
-          </div>
-          <div className="project-card">
-            <h3>Sustainability & Compliance Tracker</h3>
-            <p>Monitored environmental KPIs. Automated compliance alerts, reduced delays.</p>
-          </div>
-          <div className="project-card">
-            <h3>Candidate Experience Feedback System</h3>
-            <p>Improved recruiter-candidate feedback loop. Automated cycles, reduced delays by 50%.</p>
-          </div>
-          <div className="project-card">
-            <h3>Volunteer Management System</h3>
-            <p>Streamlined volunteer onboarding, scheduling & event tracking. Boosted team coordination.</p>
-          </div>
-          <div className="project-card">
-            <h3>Restaurant E-Management System</h3>
-            <p>Handled orders, kitchen workflows, billing & dashboards. Enhanced operational efficiency.</p>
-          </div>
-        </div>
-
-        <h2 className="project-header">Front-End Projects</h2>
-        <div className="project-grid">
-          <div className="project-card">
-            <img src="/Weather and outfit recommender.png" alt="Weather & Outfit Recommender" className="project-image" />
-            <h3>Weather & Outfit Recommender</h3>
-            <p>React app with Chart.js & API. Recommends clothes based on real-time weather. <a href="https://github.com/thanis04/weather-app" target="_blank">GitHub</a></p>
-          </div>
-
-          <div className="project-card">
-            <img src="/City explorer and expense tracker.png" alt="City Explorer" className="project-image" />
-            <h3>City Explorer & Expense Tracker</h3>
-            <p>Helps students compare US cities, expenses, rent, with map & AI summary features.</p>
-          </div>
-
-          <div className="project-card">
-            <img src="/Portfolio.png" alt="Portfolio Website" className="project-image" />
-            <h3>My Personal Portfolio Website</h3>
-            <p>This site! Fully responsive, animated sections, built with React, Tailwind & routing.</p>
-          </div>
-
-          <div className="project-card">
-            <img src="/Skill Analyzer.png" alt="Skill Analyzer" className="project-image" />
-            <h3>Skill Gap Analyzer & Role Matcher</h3>
-            <p>Recommends best-fit jobs based on skill input. Shows gaps & suggests free learning.</p>
-          </div>
-
-          <div className="project-card">
-            <img src="/LLM.png" alt="Legal Complaint Generator" className="project-image" />
-            <h3>AI Legal Complaint Generator</h3>
-            <p>LLM-based complaint writer trained on 28K NYSCEF cases using RAG & FLAN-T5 model.</p>
-          </div>
-        </div>
-
-        <h2 className="project-header">🎖️ Certifications & Achievements</h2>
-        <div className="project-grid">
-          <div className="project-card">
-            <h3>Salesforce Certified Administrator</h3>
-            <p><a href="/Admin.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a></p>
-          </div>
-          <div className="project-card">
-            <h3>Salesforce Advanced Administrator</h3>
-            <p><a href="/Salesforce Certified AdvancedAdministrator.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a></p>
-          </div>
-          <div className="project-card">
-            <h3>Salesforce Platform Developer 1</h3>
-            <p><a href="/Platform.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a></p>
-          </div>
-        </div>
-      </section>
-    </section>
-  );
-};
-
+const experiences = [
+  { title: "Salesforce Administrator: Service Cloud, Marketing Cloud & GovCloud", subtitle: "Trigyn Technologies · Client: New Jersey Turnpike Authority (Sole Salesforce Resource)", date: "Sep 2025 to Present", description: "Serve as the sole Salesforce resource for the NJTA account, partnering directly with business stakeholders to gather requirements, run gap analysis, and translate needs into BRDs and phased rollout plans. Own platform security, automation, analytics, governance, and releases from discovery through release across Service Cloud, Marketing Cloud, and GovCloud in a FedRAMP aligned org. Implemented least privilege access for 150 users, delivered 10+ Flows, six executive dashboards, and 15+ Copado releases with zero production incidents. Led solution design and UAT for an expansion for 70 users supporting a $24B capital improvement programme.", companyLogos: { employer: "/trigyn-technologies.png", client: "/nj-turnpike-authority.png" } },
+  { title: "Salesforce Business Analyst / Administrator", subtitle: "Feed716 · Sole Salesforce Administrator", date: "Feb 2025 to May 2025", description: "Worked directly with the CEO to gather requirements and led complete delivery of a Donation Management System on Salesforce Nonprofit Success Pack, supporting 5,000+ constituents and four fundraising campaigns. Documented business processes and user stories, migrated 5,000+ records, automated same day donor acknowledgments, built leadership dashboards, and led UAT, training, and documentation.", logo: "/feed716.jpg" },
+  { title: "M.S. Management Information Systems", subtitle: "University at Buffalo School of Management, SUNY", date: "Jul 2024 to May 2025", description: "Advanced study in information systems, analytics, product delivery, and business technology strategy.", logo: "/UBFinal.png" },
+  { title: "Programmer Analyst: Health Cloud, Sales Cloud & Service Cloud", subtitle: "Cognizant · Client: Takeda Pharmaceuticals", date: "Nov 2022 to Jun 2024", description: "Delivered Health Cloud, Sales Cloud, and Service Cloud solutions for 200+ users in a HIPAA regulated environment. Gathered requirements from cross functional stakeholders, wrote user stories, and built Apex, optimized SOQL/SOSL, LWC, and Flow automation that reduced referral triage time 31%. Improved forecasting accuracy 25% with CRM Analytics, coordinated UAT and releases across six Agile sprints, and trained 145+ users.", logo: "/Cognizant_Logo.jpg" },
+  { title: "Programmer Analyst Trainee", subtitle: "Cognizant · Client: Takeda Pharmaceuticals", date: "Jan 2022 to Aug 2022", description: "Built Experience Cloud Flow forms that reduced data entry time 19.4%, created multiple step approvals that improved SLA compliance 22.5%, and migrated and cleaned thousands of lead records.", logo: "/Cognizant_Logo.jpg" },
+  { title: "B.E. Computer Science Engineering", subtitle: "St. Joseph’s College of Engineering, Anna University", date: "2018 to 2022", logo: "/Anna_Uni_Fin.png" },
+];
+const skillGroups = [
+  { title: "Business Analysis", skills: "Requirements Gathering · Stakeholder Management · BRDs & Functional Specs · Process Mapping / Workflow Diagrams · Gap Analysis · User Stories · UAT Leadership · Agile/Scrum · JIRA & Confluence" },
+  { title: "Security & Governance", skills: "Profiles · Permission Sets · OWD · Sharing Rules · Field Level Security · Least Privilege Models · GovCloud and FedRAMP Controls" },
+  { title: "Automation & Development", skills: "Agentforce · Einstein · Record Triggered and Screen Flows · Apex Triggers · SOQL · SOSL · Lightning Web Components · Validation Rules · Approval Processes" },
+  { title: "Platform Operations", skills: "Copado · CI/CD · Git · SFDX · Sandbox Strategy · Change Sets · Data Loader · Duplicate Management · CRM Analytics / Tableau CRM" },
+  { title: "Clouds & Integrations", skills: "GovCloud · Health Cloud · Sales Cloud · Service Cloud · Marketing Cloud · Experience Cloud · Nonprofit Success Pack (NPSP) · AppExchange" },
+];
+const sfProjects = [
+  ["Agentforce Citizen Support Hub", "Unified fragmented Outlook inboxes into Agentforce powered Email to Case on Experience Cloud. Handles 500+ monthly inquiries, reduced resolution time from five days to two, deflects 37% of volume, and creates approximately $48K in annual productivity gains."],
+  ["GovCloud Security & Governance", "Strengthened Profiles, Permission Sets, Sharing Rules, OWD, and field level security for 150 users. Improved SLA compliance from 82% to 92% while supporting FedRAMP aligned least privilege controls."],
+  ["Nonprofit Success Pack (NPSP) Donation Management", "Built a nonprofit platform for 5,000+ constituents and four campaigns. Migrated 5,000+ records and automated donor communications from a three day turnaround to same day."],
+  ["Healthcare Referral Automation", "Combined Health Cloud, Flows, Apex, SOQL/SOSL, LWC, and analytics to reduce referral triage time 31%, improve data quality 20%, and support 200+ regulated users."],
+  ["Copado CI/CD & Release Strategy", "Standardized sandbox and deployment practices, delivering 15+ releases with zero production incidents and preventing a critical defect that would have affected 150+ users."],
+  ["Executive CRM Analytics", "Built six real time dashboards for case volume, SLA adherence, and staffing trends, eliminating more than five hours of manual reporting every week."],
+];
+const Logo = ({item}) => <div className="timeline-icon-wrapper">{item.companyLogos ? <span className="timeline-company-logos"><img src={item.companyLogos.employer} alt="Trigyn Technologies" className="employer-logo"/><img src={item.companyLogos.client} alt="New Jersey Turnpike Authority" className="client-logo"/></span> : item.logo && <img src={item.logo} alt={item.title} className="timeline-logo"/>}</div>;
+const Card = ({item,side}) => <div className={`timeline-card ${side}`}><h3 className="timeline-title">{item.title}</h3><p className="timeline-subtitle">{item.subtitle}</p><p className="timeline-desc">{item.description}</p></div>;
+function Projects() { return <section className="vertical-timeline-section"><h2 className="vertical-timeline-header">My Experience and Education!</h2><nav className="work-section-nav" aria-label="Work page sections"><a href="#experience">Experience</a><a href="#core-skills">Skills</a><a href="#salesforce-projects">Salesforce Projects</a><a href="#other-projects">Other Projects</a><a href="#certifications">Certifications</a></nav><div className="vertical-timeline" id="experience">{experiences.map((item,index)=><div className="timeline-row" key={item.title+item.date}>{index%2===0?<><Card item={item} side="left"/><Logo item={item}/><p className="timeline-date">{item.date}</p></>:<><p className="timeline-date">{item.date}</p><Logo item={item}/><Card item={item} side="right"/></>}</div>)}</div><section className="projects-section">
+  <h2 className="project-header" id="core-skills">Core Skills</h2><div className="project-grid">{skillGroups.map(group=><div className="project-card" key={group.title}><h3>{group.title}</h3><p>{group.skills}</p></div>)}</div>
+  <h2 className="project-header" id="salesforce-projects">Salesforce Projects</h2><div className="project-grid">{sfProjects.map(([title,description])=><div className="project-card" key={title}><h3>{title}</h3><p>{description}</p></div>)}</div>
+  <h2 className="project-header" id="other-projects">Other Projects</h2><div className="project-grid">
+    <div className="project-card"><img src="/Weather and outfit recommender.png" alt="Weather and Outfit Recommender" className="project-image"/><h3>Weather & Outfit Recommender</h3><p>React application using real time weather data and visual analytics to recommend context aware clothing. <a href="https://github.com/thanis04/weather-app" target="_blank" rel="noreferrer">GitHub</a></p></div>
+    <div className="project-card"><img src="/City explorer and expense tracker.png" alt="City Explorer" className="project-image"/><h3>City Explorer & Expense Tracker</h3><p>Helps students compare U.S. cities, rent, living expenses, maps, and AI generated summaries.</p></div>
+    <div className="project-card"><img src="/Portfolio.png" alt="Personal Portfolio Website" className="project-image"/><h3>Personal Portfolio Website</h3><p>A responsive React portfolio with animated routing, project storytelling, downloadable credentials, and a mobile first experience.</p></div>
+    <div className="project-card"><img src="/Skill Analyzer.png" alt="Skill Analyzer" className="project-image"/><h3>Skill Gap Analyzer & Role Matcher</h3><p>Matches user skills to roles, identifies gaps, and recommends accessible learning resources.</p></div>
+    <div className="project-card"><img src="/LLM.png" alt="Legal Complaint Generator" className="project-image"/><h3>AI Legal Complaint Generator</h3><p>Built a RAG and FLAN T5 legal drafting system using a knowledge base created from 28,000 NYSCEF PDFs.</p></div>
+  </div>
+  <h2 className="project-header" id="certifications">🏅 Certifications & Achievements</h2><div className="project-grid">
+    <div className="project-card"><img src="/certificate-agentforce.png" alt="Salesforce Certified Agentforce Specialist certificate" className="project-image certification-image" loading="lazy"/><h3>Salesforce Certified Agentforce Specialist</h3><p>Earned 2025 · AI powered CRM, agents, grounding, prompt design, and responsible deployment.</p><p><a href="/Salesforce-Certified-Agentforce-Specialist.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a></p></div>
+    <div className="project-card"><img src="/certificate-platform-developer.png" alt="Salesforce Certified Platform Developer I certificate" className="project-image certification-image" loading="lazy"/><h3>Salesforce Certified Platform Developer I, 2024</h3><p><a href="/Platform.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a></p></div>
+    <div className="project-card"><img src="/certificate-advanced-administrator.png" alt="Salesforce Certified Advanced Administrator certificate" className="project-image certification-image" loading="lazy"/><h3>Salesforce Certified Advanced Administrator, ADM 211, 2024</h3><p><a href="/Salesforce Certified AdvancedAdministrator.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a></p></div>
+    <div className="project-card"><img src="/certificate-administrator.png" alt="Salesforce Certified Administrator certificate" className="project-image certification-image" loading="lazy"/><h3>Salesforce Certified Administrator, ADM 201, 2023</h3><p><a href="/Admin.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a></p></div>
+  </div>
+</section></section>; }
 export default Projects;
+
+
+

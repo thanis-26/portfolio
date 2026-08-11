@@ -1,5 +1,6 @@
-﻿import React from "react";
+import React from "react";
 import "../App.css";
+import profileImage from "../assets/Buffalo Jen.jpg";
 
 function About() {
   return (
@@ -7,7 +8,7 @@ function About() {
       <div className="about-content-container">
         <div className="about-img">
           <div className="img-container">
-            <img src="/src/assets/Buffalo Jen.jpg" alt="Thanis Annal Jenifer Kennady" />
+            <img src={profileImage} alt="Thanis Annal Jenifer Kennady" />
             <div className="img-overlay">
               <p className="hover-text">Salesforce builder in action... ✨</p>
               <p className="hover-subtext">Usually one Flow away from making a process much easier.</p>

@@ -1,34 +1,26 @@
-import React from "react";
+﻿import React from "react";
 import "../App.css";
 
 function About() {
   return (
     <div className="about-page">
       <div className="about-content-container">
-        {/* Profile Image with Hover */}
         <div className="about-img">
           <div className="img-container">
-            <img src="/src/assets/Buffalo Jen.jpg" alt="Jen" />
+            <img src="/src/assets/Buffalo Jen.jpg" alt="Thanis Annal Jenifer Kennady" />
             <div className="img-overlay">
-              <p className="hover-text">Hover to reveal... ✨</p>
-              <p className="hover-subtext">A future Software Engineer hire in action.</p>
+              <p className="hover-text">Salesforce builder in action... ✨</p>
+              <p className="hover-subtext">Usually one Flow away from making a process much easier.</p>
             </div>
           </div>
         </div>
-
-        {/* About Text */}
         <div className="about-text">
           <h2>WHO AM I?</h2>
-          <p>
-            The name’s Thanis Annal Jenifer — and yes, I may have over-engineered this page out of sheer joy to tell my story. 
-          </p>
-          <p>
-            I recently graduated with a Master’s in Management Information Systems from the University at Buffalo. Previously, I worked at Cognizant, where I built intelligent Salesforce automations using Flows, crafted scalable Apex logic, developed Visualforce pages, and delivered tailored CRM solutions for pharmaceutical clients.
-          </p>
-          <p>
-            I thrive at the intersection of logic and creativity—whether that’s building Lightning Web Components (LWC), customizing objects, writing clean Apex classes, or designing seamless front-end interfaces in React. My favorite kind of work? Turning chaos into clarity through automation, optimized UX, and insightful dashboards.
-          </p>
-        
+          <p>I’m Thanis Annal Jenifer Kennady. I spend most of my day turning “Can Salesforce do this?” into “Yes, and it is already in testing.”</p>
+          <p>I enjoy the space where business problems meet technical possibilities. Give me a complicated process, a few stakeholder conversations, and a Salesforce org, and I will happily map the logic, remove the unnecessary clicks, and build something people actually want to use.</p>
+          <p>My toolkit includes Agentforce, Einstein, Flows, Apex, SOQL, SOSL, Lightning Web Components, CRM Analytics, Copado, Git, SFDX, and several Salesforce clouds. I can speak with business teams about requirements in the morning, troubleshoot automation in the afternoon, and still have enough energy to explain why we should test before deploying to production.</p>
+          <p>I currently support the New Jersey Turnpike Authority as its sole Salesforce resource through Trigyn Technologies. The work is serious, but my approach is simple: listen carefully, build thoughtfully, secure everything, and never make users click six times when two clicks will do.</p>
+          <p>Behind the certifications and dashboards, I am naturally curious, slightly obsessed with clean automation, and always looking for the next process that Salesforce can make smarter.</p>
         </div>
       </div>
     </div>
